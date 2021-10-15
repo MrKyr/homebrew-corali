@@ -2,7 +2,7 @@
 #                /usr/local/Library/Contributions/example-formula.rb
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
-class Nano < Formula
+class Nano226 < Formula
   homepage ""
   url "http://www.nano-editor.org/dist/v2.2/nano-2.2.6.tar.gz"
   version "2.2.6"
