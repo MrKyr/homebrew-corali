@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class Ledger < Formula
   desc "Command-line, double-entry accounting tool"
   homepage "https://ledger-cli.org/"
@@ -7,9 +10,9 @@ class Ledger < Formula
   head "https://github.com/ledger/ledger.git"
 
   bottle do
-    sha256 "3b02ee846c8db3ef9957f12b17e6643eae29185fdb17ba8bafef56be146aa465" => :catalina
-    sha256 "d493c478fbb1b38024562f907b726ef85c3ce4407a3d54b7eeccd1e7288f08c2" => :mojave
-    sha256 "cdd130ebc5d4809f403f10dc012ee6abf1d339b98e236a7785a294b7d748358c" => :high_sierra
+    sha256 catalina:    "3b02ee846c8db3ef9957f12b17e6643eae29185fdb17ba8bafef56be146aa465"
+    sha256 mojave:      "d493c478fbb1b38024562f907b726ef85c3ce4407a3d54b7eeccd1e7288f08c2"
+    sha256 high_sierra: "cdd130ebc5d4809f403f10dc012ee6abf1d339b98e236a7785a294b7d748358c"
   end
 
   depends_on "cmake" => :build
@@ -46,10 +49,10 @@ class Ledger < Formula
   test do
     balance = testpath/"output"
     system bin/"ledger",
-      "--args-only",
-      "--file", "#{pkgshare}/examples/sample.dat",
-      "--output", balance,
-      "balance", "--collapse", "equity"
+           "--args-only",
+           "--file", "#{pkgshare}/examples/sample.dat",
+           "--output", balance,
+           "balance", "--collapse", "equity"
     assert_equal "          $-2,500.00  Equity", balance.read.chomp
     assert_equal 0, $CHILD_STATUS.exitstatus
   end
