@@ -8,7 +8,7 @@ class Ts < Formula
   homepage 'http://vicerveza.homeunix.net/~viric/soft/ts/'
   url 'http://vicerveza.homeunix.net/~viric/soft/ts/ts-0.7.3.tar.gz'
   version '0.7.3'
-  sha1 '33b9321d4f48a2c2685a8240db4e00c0e69ef9bc'
+  sha256 'be4d752f01791bf55e264814bbc158b15e42f8bfbce3a6757976259fbc994faa'
 
 
   def install
